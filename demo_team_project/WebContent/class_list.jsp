@@ -303,20 +303,22 @@ nav>div {
 
 /*  Middle contents */
 section>div:nth-child(1)>a {
-	color: black;
+	color: rgba(255, 110, 1, 1.0);
 	border-color: rgba(255, 110, 1, 1.0);
 	border-style: solid;
 	background: white;
-	width: 100px;
-	height: 20px;
-	text-align: center;
+	width: 150px;
+	height: 50px;
 	padding: 0;
 	margin: 0;
-	font-size: 16px;
-	border-radius: 20px;
+	font-weight: bolder;
+	font-size: 18px;
 	margin-left: 30px;
 	margin-right: 260px;
-	border-width: 3px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
 }
 
 section>div:nth-child(1) {
@@ -333,13 +335,13 @@ section>div:nth-child(1) {
 section>div:nth-child(1)>span {
 	font-size: 35px;
 	font-weight: bold;
+	width: 140px;
 }
 
 section>div:nth-child(2)>div>input[type=button] {
-	color: rgba(255, 110, 1, 1.0);
-	border: 1px solid rgba(255, 110, 1, 1.0);
-	border-bottom-color: darkblue;
-	width: 200px;
+	color: black;
+	border: 2px solid darkgray;
+	width: 180px;
 	height: 50px;
 	padding: 0;
 	margin: 0;
@@ -421,13 +423,16 @@ section>div:nth-child(2) {
 	margin: 0;
 	font-size: 15px;
  	margin-top: 5px;
+	overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 section>div:nth-child(1)>div {
-	float: right;
-	border: 4px double darkblue;
 	height: 40px;
+	width: 450px;
+	border: 4px double rgba(255, 110, 1, 1.0);
 	border-radius: 5px;
+	float: right;
 }
 
 select[name=category] {

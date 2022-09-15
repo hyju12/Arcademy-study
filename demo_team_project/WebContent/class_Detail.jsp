@@ -532,12 +532,6 @@ form>div:nth-child(1)>div:nth-child(2) {
 	line-height: 30px;
 }
 
-.spanstyle {
-	color: lightgray;
-	font-size: 14px;
-	float: right;
-	margin-left: 10px;
-}
 </style>
 <body>
 	<div>
@@ -575,8 +569,6 @@ form>div:nth-child(1)>div:nth-child(2) {
 						onclick="addLike(this)"><i class='xi-heart-o xi-2x'></i></a> </span>
 				</div>
 			</div>
-			<span class="spanstyle">조회수 <%=article.getClass_readcount()%></span>
-			<span class="spanstyle">카테고리 <%=article.getClass_subject()%></span>
 			<div style="width: 1000px">
 				<div class="area">
 					<img alt="클래스 이미지" src="mainimg/<%=article.getClass_file()%>">
