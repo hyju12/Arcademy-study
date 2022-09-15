@@ -1,0 +1,66 @@
+li
+{
+	float: left;
+}
+textarea
+{
+	resize: none;
+	width: 500px;
+	height: 80px;
+}
+textarea:disabled
+{
+	background: white;
+}
+p
+{
+	margin: 10px;
+}
+input[type=button]
+{
+	width: 200px;
+	height: 30px;
+	background: rgba(255,110,1,1.0);
+	border: none;
+	color: white;
+}
+.tdcenter /*textarea 가운데로*/
+{
+	text-align: center;
+}
+.tdleft /*체크박스 왼쪽으로*/
+{
+	text-align: left;
+}
+.li1 /*순서*/
+{
+	margin-left: 5px;
+	font-weight: bold;
+	font-size: 20px;
+}
+#mainlogo /*메인 로고 이리온 div*/
+{
+	width: 120px;
+	height: 50px;
+	margin: 0 auto;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: yg-jalnan;
+	color: rgba(255,110,1,1.0);
+	margin-bottom: 10px;
+}
+.li2 /*footer 리스트*/
+{
+	list-style: none;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+@font-face /*메인 글꼴*/
+{
+	font-family: 'yg-jalnan';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

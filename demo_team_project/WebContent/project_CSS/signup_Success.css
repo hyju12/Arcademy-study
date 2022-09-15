@@ -1,0 +1,157 @@
+@font-face /*메인 글꼴*/ {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /*서브멘트 글꼴(해피니스 산스 타이틀)*/
+    font-family: 'Happiness-Sans-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+}
+
+li{
+    float: left;
+}
+
+.main {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-family: yg-jalnan;
+    color: rgba(255, 110, 1, 1.0);
+    border: 1px;
+
+}
+
+.signup {
+    font-size: 30px;
+    font-family: Happiness-Sans-Regular;
+    font-weight: bolder;
+    width: 230px;
+    height: 45px;
+    float: left;
+    margin-left: 250px;
+}
+
+.signup2 {
+    width: 500px;
+    height: 45px;
+    font-size: 20px;
+    font-family: Happiness-Sans-Regular;
+    float: right;
+    margin-left: -100px;
+}
+
+.main2 {
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+.ul2 {
+    height: 30px;
+    margin: 10px auto;
+    width: 1000px;
+}
+
+.li2 {
+    list-style: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.modal {
+    height: 550px;
+    background: #fff;
+    border-radius: 20px;
+    margin-top: 150px
+}
+
+.content {
+    padding: 10px;
+}
+
+.good-job {
+    text-align: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.good-job p {
+    font-size: 40px;
+    font-family: Happiness-Sans-Title;
+    font-weight: bold;
+    margin: 0 auto;
+    background-color: rgba(255,110,1,1.0);
+    color: #FFFFFF;
+    width: 600px;
+    height: 60px;
+    border-radius: 20px 20px 0 0;
+}
+
+.good-job h2 {
+    font-size: 30px;
+    font-family: Happiness-Sans-Regular;
+    margin-top: 30px;
+}
+
+.good-job input[type=button] {
+    background: rgba(255,110,1,1.0);
+    color: white;
+    border-radius: 10px;
+    border: 0;
+    margin: 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    height: 35px;
+}
+/*--------------------------------------------------------------------*/
+#mainlogo /*메인 로고 이리온 div*/
+{
+    width: 120px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: yg-jalnan;
+    color: rgba(255,110,1,1.0);
+    margin-bottom: 10px;
+}
+.li1 /*순서*/
+{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}

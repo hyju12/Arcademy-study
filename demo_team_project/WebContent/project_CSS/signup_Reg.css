@@ -1,0 +1,147 @@
+ @font-face /*메인 글꼴*/
+        {
+            font-family: 'yg-jalnan';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face { /*서브멘트 글꼴(해피니스 산스 타이틀)*/
+            font-family: 'Happiness-Sans-Title';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GangwonEduPowerExtraBoldA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Happiness-Sans-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body
+        {
+            margin: 0px;
+        }
+
+        /*ul{
+            text-align: center;
+            padding-inline-start: 0px;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+
+        }*/
+
+        li{
+            float: left;
+        }
+
+        .main{
+            width: 120px;
+            height: 50px;
+            margin: 0 auto;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: yg-jalnan;
+            color: rgba(255,110,1,1.0);
+            margin-bottom: 10px;
+        }
+
+        .signup{
+            float: left;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .signup2{
+            width: 412px;
+            height: 45px;
+            font-size: 18px;
+            font-family: Happiness-Sans-Regular ;
+            float: right;
+            padding: 0;
+        }
+
+        .main2{
+            width : 520px;
+            margin: 0 auto;
+
+        }
+
+        .side1{
+            margin-top: 20px;
+            font-family: Happiness-Sans-Regular ;
+            font-size: 14px ;
+        }
+
+        .button1{
+            color: rgba(255,110,1,1.0); border-color: rgba(255,110,1,1.0); border-style: solid; background: white; width: 120px; height: 46px; padding: 0; font-weight: bolder; margin-left: 10px;
+
+        }
+
+        .input1{
+            width: 270px; height: 40px; border-style: solid; border-color: rgb(221, 221, 221);
+        }
+
+        .font1{
+            color: rgba(255,110,1,1.0);
+        }
+
+        .div1{
+            display: inline-flex; width: 100px;
+        }
+
+        .div2{
+            width: 274px; height: 45px; display : inline-flex ; align-items: center; border-style: solid; border-color: rgb(221, 221, 221); margin: 0 auto;
+        }
+
+        .text1{
+            width: 40px ; height: 40px; border: 0px ; margin: 0 20px 0 20px ; text-align: center;
+        }
+
+        .ul2{
+            height: 30px;
+            margin: 10px auto;
+            width: 1000px;
+            /*font-weight: bolder;*/
+            /*background-color: #93C47D;*/
+
+        }
+        .li2{
+            list-style: none;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        .li1 /*순서*/
+        {
+            margin-left: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #mainlogo /*메인 로고 이리온 div*/
+        {
+            width: 120px;
+            height: 50px;
+            margin: 0 auto;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: yg-jalnan;
+            color: rgba(255,110,1,1.0);
+            margin-bottom: 10px;
+        }

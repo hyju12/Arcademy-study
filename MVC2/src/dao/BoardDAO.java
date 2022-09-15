@@ -161,7 +161,6 @@ public class BoardDAO {
 			
 			insertCount=pstmt.executeUpdate();
 
-			
 		}catch(Exception ex){
 			System.out.println(ex);
 		}finally{

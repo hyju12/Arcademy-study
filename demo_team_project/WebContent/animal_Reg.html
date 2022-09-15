@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6</title>
+</head>
+<link rel="stylesheet" type="text/css" href="project_CSS/animal_Reg.css">
+<script src="project_JS/animal_Reg.js"></script>
+<body>
+    <div>
+        <div style="background-image: url('../mainimg/orange_full.png')">
+            <header id="tophead">
+                <div id="topdiv1">이리온</div>
+                <div id="topdiv2">
+                    <ul>
+                        <li>커뮤니티</li>
+                        <li>위치안내</li>
+                        <li>중고물폼</li>
+                        <li>서비스 신청</li>
+                        <li>실종신고센터</li>
+                    </ul>
+                </div>
+                <div style="float: left;width: 150px; ">
+                    <a>마이페이지</a>
+                    <a>로그아웃</a>
+                </div>
+            </header>
+        </div>
+        <div id="midbox">
+            <section style="width: 800px; height: 650px; margin: 10px auto ; font-family: 'Happiness-Sans-Regular';">
+                <p style=" margin-left: 30px">반려동물 등록</p>
+
+                <div style="width: 600px; height: 150px; margin-top: 30px ; margin-left: 20px;">
+                    <div>프로필사진
+                        <img id="pro" src="../mainimg/x19.jpg"
+                        style="width: 90px;height: 90px; border-radius: 100px; margin: 15px;">
+                    </div>
+                    <label class="input-file-button" for="input-file" >
+                    사진바꾸기</label>
+                    <input type="file" id="input-file" style="visibility:hidden; margin-top: 90px">
+
+                </div>
+                <div>
+                    <div style="margin-top: 5px;">동물종류</div>
+                    <select style="width: 100px; height: 30px; font-family: 'Happiness-Sans-Regular';">
+                        <option>종류선택</option>
+                        <option>강아지</option>
+                        <option>고양이</option>
+                        <option>햄스터</option>
+                        <option>기니피그</option>
+                        <option>말</option>
+                        <option>다람쥐</option>
+                        <option>패럿</option>
+                    </select>
+                </div>
+                <div>
+                    <div style="margin-top: 5px;">성별선택</div>
+                    <input type="radio" value="" name="sung" style="margin-top: 10px;">남
+                    <input type="radio" value="" name="sung" style="margin-top: 10px;">여
+                    <input type="radio" value="" name="sung" style="margin-top: 10px;">잘 모름
+
+                </div>
+                <div>
+                    <div style="margin-top: 5px;">생년월일</div>
+                    <input type="text" name="" placeholder="YYYY" class="text1" maxlength="4">
+                    <span>/</span>
+                    <input type="text" name="" placeholder="MM" class="text1" maxlength="2">
+                    <span>/</span>
+                    <input type="text" name="" placeholder="DD" class="text1" maxlength="2">
+                </div>
+                <div>
+                    <div style="margin-top: 5px;">입양한날</div>
+                    <input type="text" name="" placeholder="YYYY" class="text1" maxlength="4">
+                    <span> /</span>
+                    <input type="text" name="" placeholder="MM" class="text1" maxlength="2">
+                    <span> /</span>
+                    <input type="text" name="" placeholder="DD" class="text1" maxlength="2">
+                </div>
+                <div>
+                    <div>체중</div>
+                    <input type="text" size="4" style="border: 0; border-bottom: 1px solid black"> kg
+                </div>
+                <div>
+                    <div>중성화상태</div>
+                    <select style="width: 100px; height: 30px; font-family: 'Happiness-Sans-Regular';">
+                        <option>O</option>
+                        <option>X</option>
+                        <option>잘모름</option>
+                    </select>
+                </div>
+                <div>
+                    <div >관심질병</div>
+                    <input type="text" size="15px" style="border: 0; border-bottom: 1px solid black">
+                </div>
+            </section>
+            <div style="width: 600px; margin: 3px auto; height: 45px;">
+                <div style="margin: auto; margin-top: 20px; width: 250px; ">
+                    <input type="submit" value="저장하기" class="btn1" onclick="submit()" style="font-family: 'Happiness-Sans-Regular';">
+                    <input type="reset" value="취소" class="btn1" style="font-family: 'Happiness-Sans-Regular';">
+                </div>
+
+            </div>
+        </div>
+        <footer style="height: 187px; margin: 0 auto; background-image: url(../mainimg/orange_full_4.png);" >
+            <div style="width: 1000px; height: 30px; margin: 0 auto; padding-top: 20px;">
+                <ul style="height: 30px; margin: 0 auto; width: 1000px; margin-bottom: 20px;">
+                    <li class="li2">고객센터</li>
+                    <li class="li2">1:1문의</li>
+                    <li class="li2">공지사항</li>
+                    <li class="li2">유기견보호센터</li>
+                    <li class="li2">반려동물 보호단체</li>
+                </ul>
+                <div style="float: left; width: 400px; height: 80px; margin:0;">
+                    대표자 : 홍길동<br>
+                    전화번호 : 010-1234-5678<br>
+                    주소 : 서울특별시 ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ 231-21 202호<br>
+                    이메일 : qwer1234@naver.com
+                </div>
+                <div style="float: right;  width: 400px; height: 80px;margin: 0 ; ">
+                    문의 가능 시간 : 09:00 ~ 18:00 (주말, 공휴일 제외)<br><br>
+                    <b>ㅂㅈㄷㅂㄱㅂㅂ</b><br>
+                    ㅂㅈㄷㅁㄷㅂㅈㄷㅇㅁㄴㅇㅂㅈㄷㅇㄴㅁㅇㅈㅂㅀㅇ
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

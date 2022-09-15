@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+@font-face /*메인 글꼴*/ {
+	font-family: 'yg-jalnan';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Happiness-Sans-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Regular.woff2')
+		format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cafe24Ssurround';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: Happiness-Sans-Regular;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0px;
+}
+
+ul {
+	margin: 0 auto;
+	width: 1000px;
+	font-weight: bolder;
+}
+
+li {
+	list-style: none;
+	float: left;
+}
+
+/* Header CSS */
+header {
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+header>div:nth-child(1) {
+	width: 150px;
+	height: 50px;
+	margin: 5px;
+	float: left;
+	margin-left: 400px;
+	margin-top: 10px;
+	font-size: 40px;
+}
+
+header>div:nth-child(1)>span {
+	font-family: 'yg-jalnan';
+}
+
+header>div:nth-child(2) {
+	float: right;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 15px;
+	color: darkblue;
+	font-weight: bold;
+}
+
+/*  Middle contents */
+section {
+	display: block;
+	position: relative;
+	margin: 50px auto;
+	width: 1000px;
+	height: 1000px;
+	background: white;
+}
+p{
+	margin-bottom: 30px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	padding-left: 35px;
+	font-size: 14px;
+	text-decoration: none;
+	color: black;
+}
+
+table tr th {
+	padding: 15px 0 15px 0;
+	background: #eee;
+	font-family: none;
+}
+
+table tr {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+
+table tr td {
+	padding: 10px 0 10px 0;
+	text-align: center;
+}
+
+/* Menu(Navigation Bar) */
+nav {
+	width: 100%;
+	z-index: 999;
+	background: white;
+}
+
+nav li {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 142px;
+	height: 50px;
+	transition: 0.35s;
+}
+
+nav li a {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 142px;
+	height: 50px;
+	transition: 0.35s;
+	padding: 0;
+	font-size: 16px;
+	
+}
+
+nav>div>ul>li:hover {
+	background-color: rgba(255, 110, 1, 1.0);
+	color: white;
+}
+
+nav>div {
+	height: 50px;
+	margin: 0 auto;
+	border-top: 3px solid #ddd;
+	border-bottom: 3px solid rgba(255, 110, 1, 1.0);
+}
+
+/* Footer CSS */
+
+footer {
+	height: 180px;
+	margin: 0 auto;
+	background-image: url('../mainimg/orange_full_4.png');
+}
+
+footer>div {
+	width: 1000px;
+	height: 30px;
+	margin: 0 auto;
+}
+
+footer>div>ul {
+	height: 40px;
+	margin: 0px auto;
+	width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+footer>div>ul>li {
+	list-style: none;
+	float: left;
+	margin-left: 50px;
+	margin-right: 50px;
+	font-size: 15px;
+}
+
+address {
+	font-style: normal;
+	font-size:12px;
+	float: left;
+	width: 400px;
+	height: 100px;
+	margin-top:15px;
+	margin-left: 55px; 
+	color: '#747474';
+	line-height: 190%;
+}
+
+#adr{
+	margin-left: 80px;
+	text-align: right;
+}
+
+input[type=button]
+{
+	color: rgba(255,110,1,1.0);
+	border-color: rgba(255,110,1,1.0);
+	border-style: solid;
+	background: white;
+	width: 120px;
+	height: 46px;
+	padding: 0;
+	font-size: 15px;
+	margin-left: 5px;
+	margin-top: 20px;
+	border-radius: 5px;
+	float: right;
+}
+
+.active {
+  position: fixed;
+  top: 0px;
+}

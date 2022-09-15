@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>3</title>
+	<link rel="stylesheet" type="text/css" href="project_CSS/signup_Certify.css">
+</head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="project_JS/signup_Certify.js"></script>
+<body style="margin: 0;">
+	<div style="width: 100%; height: 80px;">
+		<div id="mainlogo">이리온
+		</div>
+	</div>
+	<div style="width: 550px; height: 50px; margin: 0 auto;">
+		<div style="float: left; font-size: 30px; font-weight: bold;">
+			회원가입
+		</div>
+		<div style="float: left;">
+			<ul style="padding: 0; margin-left: 20px; list-style: none;">
+				<li class="li1">1약관동의</li>
+				<li class="li1" style="text-decoration: overline; color: rgba(255,110,1,1.0);">2휴대폰인증</li>
+				<li class="li1">3정보입력</li>
+				<li class="li1">4가입완료</li>
+			</ul>
+		</div>
+	</div>
+	<div style="width: 548px; height: 600px; margin: 0 auto; margin-bottom: 25px; margin-top: 150px;">
+		<div style="padding: 5px; padding-top: 20px; padding-bottom: 30px;">
+			<form>
+				<div id="phone_div" style="width: 100%; height: 300px;">
+					<p style="text-align: left; font-size: 20px; font-weight: bold; margin-left: 40px; float: left;">
+						<input type="radio" id="phone_id" name="certified" value="phone" onchange="setDisplay()" checked>
+						휴대전화로 인증하기
+					</p>
+					<p style="text-align: left; font-size: 20px; font-weight: bold; margin-left: 40px; float: left;">
+						<input type="radio" id="email_id" name="certified" value="email" onchange="setDisplay()">
+						이메일로 인증하기
+					</p>
+					<table align="center" id="email_table">
+						<tr>
+							<td>
+								<input type="text" name="email" placeholder="이메일 입력">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<select id="email_select">
+									<option value="@daum.net">@daum.net</option>
+									<option value="@naver.com">@naver.com</option>
+									<option value="@gmail.com">@gmail.com</option>
+									<option value="@nate.com">@nate.com</option>
+									<option value="@hanmail.com">@hanmail.com</option>
+								</select><input type="button" name="code" value="인증번호 받기" onclick="email_batgi()">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" name="email_num" placeholder="인증번호 입력하세요" class="box_size" id="email_num_box" disabled>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: left;">
+								<p id="email_mungu" style="color: red;">
+									인증이 필요합니다.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="button" name="email_join" value="인증완료" onclick="email_success()">
+							</td>
+						</tr>
+				</table>
+					<table align="center" id="phone_table">
+						<tr>
+							<td>
+								<select>
+									<option>가나 +233</option>
+									<option>가봉 +241</option>
+									<option>가이아나 +592</option>
+									<option>감비아 +220</option>
+									<option>과테말라 +502</option>
+									<option>괌 +1 671</option>
+									<option>그레나다 +1 473</option>
+									<option>그리스 +30</option>
+									<option>대한민국 +82</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" name="phonenum" placeholder="전화번호 입력" maxlength="11" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><input type="button" name="code" value="인증번호 받기" onclick="phone_batgi()">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" name="phone_num" placeholder="인증번호 입력하세요" class="box_size" id="phone_num_box" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: left;">
+								<p id="phone_mungu" style="color: red;">
+									인증이 필요합니다.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="button" name="phone_join" value="인증완료" onclick="phone_success()">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<br>
+			</form>
+		</div>
+	</div>
+	<footer style="height: 187px; margin: 0 auto; background-image: url(../mainimg/orange_full_4.png);" >
+		<div style="width: 1000px; height: 30px; margin: 0 auto; padding-top: 20px;">
+			<ul style="height: 30px; margin: 0 auto; width: 1000px; margin-bottom: 20px;">
+				<li class="li2">고객센터</li>
+				<li class="li2">1:1문의</li>
+				<li class="li2">공지사항</li>
+				<li class="li2">유기견보호센터</li>
+				<li class="li2">반려동물 보호단체</li>
+			</ul>
+			<div style="float: left; width: 400px; height: 80px; margin:0;">
+				대표자 : 홍길동<br>
+				전화번호 : 010-1234-5678<br>
+				주소 : 서울특별시 ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ 231-21 202호<br>
+				이메일 : qwer1234@naver.com
+			</div>
+			<div style="float: right;  width: 400px; height: 80px;margin: 0 ; ">
+				문의 가능 시간 : 09:00 ~ 18:00 (주말, 공휴일 제외)<br><br>
+				<b>ㅂㅈㄷㅂㄱㅂㅂ</b><br>
+				ㅂㅈㄷㅁㄷㅂㅈㄷㅇㅁㄴㅇㅂㅈㄷㅇㄴㅁㅇㅈㅂㅀㅇ
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

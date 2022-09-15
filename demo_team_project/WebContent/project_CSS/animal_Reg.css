@@ -1,0 +1,144 @@
+@font-face  {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+font {
+    font-size: 40px;
+}
+
+ul {
+    margin: 0 auto;
+    width: 1000px;
+
+}
+
+li {
+    list-style: none;
+    float: left;
+    margin-top: 30px;
+    margin-right: 40px;
+    font-size: 15px;
+}
+
+#tophead {
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+#topdiv1 {
+    width: 150px;
+    height: 90px;
+    float: left;
+    margin: 5px;
+    color: white;
+    font-size: 45px;
+    font-family: yg-jalnan;
+}
+
+#topdiv2 {
+    width: 650px;
+    height: 90px;
+    margin: 0 auto;
+    float: left;
+    color: #FFFFFF;
+    font-family: Happiness-Sans-Regular;
+}
+
+a {
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+#midbox {
+    margin: 5px auto;
+    width: 700px;
+    height: 800px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#midbox section p {
+    font-size: 35px;
+    font-family: Happiness-Sans-Regular;
+    font-weight: bold;
+}
+
+.ul2 {
+    height: 30px;
+    margin: 0 auto;
+    width: 1000px;
+    /*background-color: #93C47D;*/
+}
+
+.li2 {
+    list-style: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.input-file-button {
+    padding: 6px 20px;
+    background-color: rgba(255, 151, 0, 1);
+    border-radius: 4px;
+    color: white;
+    font-weight: bolder;
+    font-family: Happiness-Sans-Regular;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#midbox section div {
+    width: 600px;
+    height: 50px;
+    /*background-color: floralwhite;*/
+    margin: 10px;
+
+}
+
+#midbox section div > div {
+    width: 80px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Happiness-Sans-Regular;
+    text-align: right;
+    float: left;
+    margin: 0 50px;
+}
+.text1 {
+    width: 45px;
+    height: 25px;
+    border: 0;
+
+    margin: 0;
+    text-align: center;
+}
+
+.btn1 {
+    margin: 10px;
+    background-color: rgba(255, 151, 0, 1);
+    border-radius: 5px;
+    border: 0;
+    font-weight: bold;
+    color: white;
+    width: 100px;
+    height: 40px;
+}

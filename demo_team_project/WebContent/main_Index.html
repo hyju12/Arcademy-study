@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>1</title>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/> <!--사진 and 피드 슬라이드 기능 / css 파일-->
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> <!--사진 and 피드 슬라이드 기능 / css 파일-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <!--사진 and 피드 슬라이드 기능 / js 파일-->
+	<script type="text/javascript" src="slick/slick.min.js"></script> <!--사진 and 피드 슬라이드 기능 / js 파일-->
+	<link rel="stylesheet" type="text/css" href="project_CSS/main_Index.css"> <!--우리가 만든 css 파일-->
+	<script src="project_JS/main_Index.js"></script> <!--사진 and 피드 슬라이드 기능 옵션 / js 파일-->
+</head>
+<body>
+	<div id="back"> <!--배경색상(전체div)-->
+		<div id="lside"> <!--로고, 이미지, 로그인 (메인 왼쪽 div)-->
+			<div style="float: left;">
+				<div class= "qwer"><font class="main_font">이리온</font></div>
+				<div style="width: 400px; height: 325px; text-align: center;">
+					<p style="margin-bottom: 12px; font-family: Happiness-Sans-Title; color: white; font-size: 13pt;">반려인을 위한 소셜 네트워크 플랫폼</p>
+					<font style="color: white; font-family: Cafe24Ssurround; font-size: 25pt;">모두의 반려생활이<br>궁금하다면<br>지금 여기로,</font>
+					<font style="color: darkslateblue; font-family: Cafe24Ssurround; font-size: 25pt;">이리온</font>
+					<img src="mainimg/main.png" id="dog">
+				</div>
+				<div style="width: 410px; height: 200px; margin: 100px 0 0 0px;">
+					<div>
+						<form action="login_Check.jsp">
+							<input type="text" name="id" size="45px" placeholder ="아이디" style="font-family: Happiness-Sans-Regular;">
+							<input type="password" name="pw" size="50px" placeholder ="비밀번호" style="font-family: Happiness-Sans-Regular;">
+							<a href="#" style="font-family: Happiness-Sans-Regular; margin-top: 23px; margin-left: -200px;">아이디, 비밀번호 찾기</a>
+							<button type="submit" class="custom-btn btn-7" style="font-family: Happiness-Sans-Regular;"> <span>로그인</span></button>
+							<a href = "signup_Terms.html" id="join">처음 이용하는 고객이라면?</a>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="best"> <!--베스트피드 전체-->
+				<p id="bestfeed">베스트피드</p>
+				<div class="multiple-items">
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/q1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x1.jpg" class="profile_img">
+										<font class="font_nick"><b>사찌네</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>집사야 까꿍<br>
+											❤️<br>
+											❤️<br>
+										</p>
+										<ul>
+											<li class="text_li">#집사</li>
+											<li class="text_li">#까꿍</li>
+											<li class="text_li">#놀래키기</li>
+											<li class="text_li">#♥</li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/w1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x2.jpg" class="profile_img">
+										<font class="font_nick"><b>치리엄마</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>할아버지손바닥을 베개삼아 자는 울 꼬맹이ㅋㅋ</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/e1.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">2 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/e2.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">3 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/e3.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x3.jpg" class="profile_img">
+										<font class="font_nick"><b>여름이언닝</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>우리 여름이 베스트리뷰로 받은 선물</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 2</div>
+									<div class="feed_img_div">
+										<img src="mainimg/r1.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">2 / 2</div>
+									<div class="feed_img_div">
+										<img src="mainimg/r2.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x4.jpg" class="profile_img">
+										<font class="font_nick"><b>후추가루</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>일단 아파도 노는 타입..^^</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/t1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x5.jpg" class="profile_img">
+										<font class="font_nick"><b>전별찌</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>아빠 가계에서 놀다가 구름이이뻐서 올려요❤️</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/y1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x6.jpg" class="profile_img">
+										<font class="font_nick"><b>까매</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>🖤🐈‍⬛</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/u1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x7.jpg" class="profile_img">
+										<font class="font_nick"><b>담냥이엄마</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>밥먹는것도 힘겨워보여...  살도 근육도 다 빠지고 늙어빠진 우리 냥이....  오늘따라 딱해보이네 😭</p>
+										<ul>
+											<li class="text_li">#17살미묘르신 </li>
+											<li class="text_li">#냥이마이무거 </li>
+											<li class="text_li">#사랑해</li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/i1.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">2 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/i2.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">3 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/i3.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x8.jpg" class="profile_img">
+										<font class="font_nick"><b>슈나장군</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>확실히 어려보이는 사진들 아닌가요 ㅋㅋ<br>뭔가 뽀송한 느낌 ㅋㅎㅋㅎ🤣<br>장군이도 개린이 시절 있었다구!!<br>근데 사진 화질 무슨일이니..</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/o1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x9.jpg" class="profile_img">
+										<font class="font_nick"><b>초보집사</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>돼지 인증🐷✌ㅋㅋ산책 2번 매일매일 하는데 살찌는 강쥐가 여기있습니다 오늘따라 더 부해보이네</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/p1.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">2 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/p2.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">3 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/p3.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x10.jpg" class="profile_img">
+										<font class="font_nick"><b>여름이언닝</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>사고뭉치 노여름<br><br>사실 일상...</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/a1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x11.jpg" class="profile_img">
+										<font class="font_nick"><b>주주네_검정콩두유</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>꽃미묘 두유입니당<br>아침부터 이쁨이쁨이였어요</p>
+										<ul>
+											<li class="text_li">#출첵</li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/s1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x12.jpg" class="profile_img">
+										<font class="font_nick"><b>솜뭉치..</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>숏다리 뭉치</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/d1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x13.jpg" class="profile_img">
+										<font class="font_nick"><b>은주인절미</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>인절미❤가은이 오늘도 즐거운하루되자</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/f1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x14.jpg" class="profile_img">
+										<font class="font_nick"><b>솜뭉치..</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>세상 불쌍한척 ㅋ</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 2</div>
+									<div class="feed_img_div">
+										<img src="mainimg/g1.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">2 / 2</div>
+									<div class="feed_img_div">
+										<img src="mainimg/g2.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x15.jpg" class="profile_img">
+										<font class="font_nick"><b>치리엄마</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>요거봐라 ㅋㅋ<br>이젠 엄마가 부르면 바로 볼 수 있게 방향바꿔 누워있는거야?ㅋㅋㅋ</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/h1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x16.jpg" class="profile_img">
+										<font class="font_nick"><b>치즈욤</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>오늘은 간식파티🥳</p>
+										<ul>
+											<li class="text_li">#간식</li>
+											<li class="text_li">#냠냠</li>
+											<li class="text_li">#평범한</li>
+											<li class="text_li">#고양이</li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/j1.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">2 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/j2.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">3 / 3</div>
+									<div class="feed_img_div">
+										<img src="mainimg/j3.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x17.jpg" class="profile_img">
+										<font class="font_nick"><b>은설</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>로이<br>기분 안 좋은 거 아님 그저 치킨이 먹고 싶을 뿐것도🤣<br>씻고뽀송☁</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/k1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x18.jpg" class="profile_img">
+										<font class="font_nick"><b>전별찌</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>아빠가 달콩이 얼굴 부분 미용해줬어요.</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 1</div>
+									<div class="feed_img_div">
+										<img src="mainimg/l1.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x19.jpg" class="profile_img">
+										<font class="font_nick"><b>솜뭉치..</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>올 뭉치 애기때~</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div>
+						<section><!--피드 전체-->
+							<div class="single-item">
+								<div>
+									<div class="numbertext">1 / 2</div>
+									<div class="feed_img_div">
+										<img src="mainimg/z1.jpg" class="feed_img">
+									</div>
+								</div>
+								<div>
+									<div class="numbertext">2 / 2</div>
+									<div class="feed_img_div">
+										<img src="mainimg/z2.jpg" class="feed_img">
+									</div>
+								</div>
+							</div>
+
+							<div class="bottom_feed_div">
+								<div class="bottom_feed_padding_div">
+									<div style="height: 50px;">
+										<img src="mainimg/x20.jpg" class="profile_img">
+										<font class="font_nick"><b>치리엄마</b></font>
+										<img src="mainimg/qsccsesce.png" class="like">
+									</div>
+									<div class="feed_text_div">
+										<p>자는데 왜 자꾸 내이름 부르냐고!!!!!! ㅋ</p>
+										<ul>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+											<li class="text_li"></li>
+										</ul>
+									</div>
+									<div>
+										<ul>
+											<li class="day_li">댓글</li>
+											<li class="day_li">4</li>
+											<li class="day_li" style="float: right;">1일전</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-wrapper">
+		<div class="modal">
+			<div class="content">
+				<div class="good-job">
+					<h1>이리온</h1>
+					<h2>로그인을 하시면 더 많은 서비스를 이용할 수 있어요~</h2>
+					<input id="modalbtn" type="button" name="gologin" value="로그인하러가기">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

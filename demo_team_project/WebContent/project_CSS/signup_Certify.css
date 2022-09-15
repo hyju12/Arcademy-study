@@ -1,0 +1,94 @@
+li
+{
+	float: left;
+}
+td
+{
+	text-align: center;
+}
+input[name=code] /*인증번호 받기 버튼*/
+{
+	color: rgba(255,110,1,1.0);
+	border-color: rgba(255,110,1,1.0);
+	border-style: solid;
+	background: white;
+	width: 131px;
+	height: 55px;
+	padding: 0;
+	font-weight: bolder;
+	margin-left: 10px;
+	border-radius: 5px 5px 5px 5px
+}
+input[name=phone_join], input[name=email_join] /*인증완료 버튼*/
+{
+	width: 450px;
+	height: 50px;
+	margin: 0px;
+	background: rgba(255,110,1,1.0);
+	border: none;
+	color: white;
+}
+input[name=phonenum] /*전화번호 입력창*/
+{
+	width: 301px;
+	height: 50px;
+}
+input[name=email] /*이메일 입력 창*/
+{
+	width: 442px;
+	height: 50px;
+}
+select /*전화번호 국가 선택*/
+{
+	width: 450px;
+	height: 50px;
+}
+#email_select /*이메일 선택*/
+{
+	width: 309px;
+	height: 50px;
+}
+.box_size /*인증번호 입력창*/
+{
+	box-sizing: border-box;
+	width: 450px;
+	height: 50px;
+	padding: 0;
+}
+#phone_num_box:disabled, #email_num_box:disabled /*인증번호 잠겼을때*/
+{
+	background: lightgray;
+}
+#mainlogo /*메인 로고 이리온 div*/
+{
+	width: 120px;
+	height: 50px;
+	margin: 0 auto;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: yg-jalnan;
+	color: rgba(255,110,1,1.0);
+	margin-bottom: 10px;
+}
+.li1 /*순서*/
+{
+	margin-left: 5px;
+	font-weight: bold;
+	font-family: Happiness-Sans-Regular ;
+	font-size: 20px;
+}
+.li2 /*footer 리스트*/
+{
+	list-style: none;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+@font-face /*메인 글꼴*/
+{
+	font-family: 'yg-jalnan';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
