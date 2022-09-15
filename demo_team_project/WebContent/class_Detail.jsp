@@ -51,6 +51,11 @@
 					slidesToShow : 3,
 					slidesToScroll : 1
 				});
+				
+				$('#class_button').click(
+						function() {
+							alert("클래스 신청이 정상적으로 완료되었습니다. <br> 신청 현황은 마이페이지에서 확인 가능합니다.");
+						});
 
 			});
 
@@ -481,7 +486,7 @@ form>div:nth-child(1) a {
 	float: left
 }
 
-.area input[type=button] {
+#class_button {
 	color: rgba(255, 110, 1, 1.0);
 	border: 3px solid #f0f3f8;
 	width: 500px;
@@ -562,7 +567,7 @@ form>div:nth-child(1)>div:nth-child(2) {
 		<div>
 			<span>교육관리</span><a href="class_Writing.jsp">클래스등록</a>
 		</div>
-		<form>
+		<form action="">
 			<div>
 				<div>
 					<span><%=article.getClass_title()%> </span> <a class="heartBtn"
@@ -593,7 +598,7 @@ form>div:nth-child(1)>div:nth-child(2) {
 						<p><%=article.getClass_infor()%></p>
 					</div>
 					<div>
-						<input type="button" value="클래스 신청">
+						<input type="submit" value="클래스 신청" id="class_button">
 					</div>
 				</div>
 			</div>

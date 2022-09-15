@@ -1,14 +1,10 @@
 <%@page import="prj_java.CntDTO"%>
-<%@page import="vo.PageInfo"%>
-<%@page import="vo.ClassBoardBean"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="vo.ClassBoardBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%
-	ArrayList<ClassBoardBean> PopularList=(ArrayList<ClassBoardBean>)request.getAttribute("PopularList");
-	ArrayList<ClassBoardBean> RecentList=(ArrayList<ClassBoardBean>)request.getAttribute("RecentList");
-    PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
+	ClassBoardBean article = (ClassBoardBean) request.getAttribute("article");
 %>
 
 <!DOCTYPE html>
@@ -25,9 +21,12 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+<link rel="stylesheet"
+	href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 <script type="text/javascript">
 	$(document).ready(
+
 			function() {
 
 				var navOffset = $('nav').offset();
@@ -52,16 +51,18 @@
 					slidesToShow : 3,
 					slidesToScroll : 1
 				});
-				
-				$('section>div:nth-child(1)>div').mouseenter(function(){
-					$('section>div:nth-child(1)>div').css(
-							"border", "3px solid rgba(255, 110, 1, 1.0)")
-					
-				});
-				
-				
 
 			});
+
+	function addLike(obj) {
+		if (obj.style.color == "red") {
+			$(obj).html("<i class='xi-heart-o xi-2x'></i>");
+			$(obj).css("color", "black");
+		} else {
+			$(obj).html("<i class='xi-heart xi-2x'></i>");
+			$(obj).css("color", "red");
+		}
+	}
 </script>
 <style>
 @font-face /*메인 글꼴*/ {
@@ -217,6 +218,12 @@ address {
 	text-align: right;
 }
 
+img {
+	width: 450px;
+	height: 450px;
+	margin: 10px;
+}
+
 .active {
 	position: fixed;
 	top: 0px;
@@ -232,12 +239,8 @@ section {
 }
 
 p {
-	margin-bottom: 30px;
-	font-size: 35px;
-	font-weight: bold;
-	display: flex;
-	justify-content: center;
-	margin-top: 100px;
+	font-size: 16px;
+	color: gray;
 }
 
 table {
@@ -247,6 +250,7 @@ table {
 }
 
 a {
+	padding-left: 35px;
 	font-size: 14px;
 	text-decoration: none;
 	color: black;
@@ -321,8 +325,9 @@ section>div:nth-child(1)>a {
 	border-radius: 10px;
 }
 
+}
 section>div:nth-child(1) {
-	display: flex;
+	display: inline-flex;
 	align-items: baseline;
 	justify-content: space-between;
 }
@@ -335,13 +340,13 @@ section>div:nth-child(1) {
 section>div:nth-child(1)>span {
 	font-size: 35px;
 	font-weight: bold;
-	width: 140px;
 }
 
 section>div:nth-child(2)>div>input[type=button] {
-	color: black;
-	border: 2px solid darkgray;
-	width: 180px;
+	color: rgba(255, 110, 1, 1.0);
+	border: 1px solid rgba(255, 110, 1, 1.0);
+	border-bottom-color: black;
+	width: 200px;
 	height: 50px;
 	padding: 0;
 	margin: 0;
@@ -384,8 +389,8 @@ section>div:nth-child(2) {
 
 .div_style2 {
 	border: 1px dotted #8C8C8C;
-	width: 320px !important;
-	height: 200px;
+	width: 350px !important;
+	height: 180px;
 	float: left;
 	margin: 10px 0 0 10px;
 	background-color: white;
@@ -408,7 +413,6 @@ section>div:nth-child(2) {
 
 .div_style2 div {
 	height: 100%;
-	width: 50%;
 	float: left;
 }
 
@@ -422,18 +426,22 @@ section>div:nth-child(2) {
 
 .p_style {
 	margin: 0;
-	font-size: 14px;
- 	margin: 10px;
-	overflow: hidden;
-    text-overflow: ellipsis;
+	font-size: 16px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+form>div {
+	width: 1000px;
+	height: 100px;
+	margin-top: 50px;
 }
 
 section>div:nth-child(1)>div {
-	height: 40px;
-	width: 450px;
-	border: 4px double rgba(255, 110, 1, 1.0);
-	border-radius: 5px;
 	float: right;
+	border: 4px double rgba(255, 110, 1, 1.0);
+	height: 40px;
+	border-radius: 5px;
 }
 
 select[name=category] {
@@ -443,23 +451,85 @@ select[name=category] {
 	height: 30px;
 	font-size: 14px;
 }
-#registForm {
-	width: 500px;
-	height: 600px;
-	border: 1px solid red;
-	margin: auto;
+
+form>div:first-child>div:first-child>span {
+	font-weight: bolder;
+	font-size: 25px;
 }
 
-#pageList {
-	margin: auto;
-	width: 500px;
-	text-align: center;
+form>div:first-child {
+	border-bottom: 3px solid #f0f3f8;
+	display: flex;
+	align-items: center;
 }
 
-#emptyArea {
-	margin: auto;
+form>div:nth-child(1) a {
+	float: right;
+}
+
+#content {
+	font-size: 17px;
+}
+
+.locationBtn {
+	font-size: 40px;
+}
+
+.area {
 	width: 500px;
-	text-align: center;
+	height: 500px;
+	float: left
+}
+
+.area input[type=button] {
+	color: rgba(255, 110, 1, 1.0);
+	border: 3px solid #f0f3f8;
+	width: 500px;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	font-weight: bolder;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.area div {
+	display: flex;
+	align-items: center;
+	height: 90px;
+	border-bottom: 3px solid #f0f3f8;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: flex-start;
+}
+
+.suv_span {
+	font-size: 25px;
+	font-weight: bolder;
+}
+
+#suv_span1{
+	width: 70px;
+}
+
+#suv_span2{
+	width: 120px;
+}
+
+form>div:nth-child(1)>div:nth-child(2) {
+	font-size: 13px;
+	height: 20px;
+	width: 130px;
+	margin-top: 20px;
+	color: darkgray;
+	display: flex;
+	align-items: flex-end;
+	justify-content: right;
+}
+
+#content>span {
+	line-height: 30px;
 }
 
 </style>
@@ -488,93 +558,52 @@ select[name=category] {
 			</div>
 		</nav>
 	</div>
-	<section id="listForm">
+	<section>
 		<div>
-			<span>교육관리</span><a href="ClassboardWriteForm.bo">클래스등록</a>
-			<div>
-				<select name="category"
-					style="border: 0; border-right: 2px solid #cfcfcf; text-align: center; height: 30px; font-size: 14px;">
-					<option value="cnt_title">제목</option>
-					<option value="cnt_content">내용</option>
-					<option value="cnt_nick">작성자</option>
-				</select> <input type="text" name="search" placeholder="검색어를 입력하세요"
-					style="border: 0; border-right: 2px solid #c7c7c7; width: 300px; height: 30px; margin-top: 7px; font-size: 14px;">
-				<input type="submit" value="검색"
-					style="border: 0; background-color: white; width: 50px; font-size: 14px;">
-			</div>
+			<span>교육관리</span><a href="class_Writing.jsp">클래스등록</a>
 		</div>
-		<div>
-			<div></div>
+		<form>
 			<div>
-				<input type="button" value="반려동물 훈련"> <input type="button"
-					value="반려동물 관리"> <input type="button" value="반려동물 간식">
-				<input type="button" value="보호자 상담"> <input type="button"
-					value="기타">
-			</div>
-		</div>
-		<%
-				if(PopularList != null){
-				%>
-
-		<form action="">
-			<div>
-				<p>인기클래스</p>
-				<div class="multiple-items">
-							<%
-		for(int i=0;i<PopularList.size();i++){
-			
-	%>
-					<div class="div_style2" onclick="location.href ='ClassboardDetail.bo?board_num=<%=PopularList.get(i).getClass_num()%>'">
-						<div>
-							<p class="p_style"> <%=PopularList.get(i).getClass_num()%> </p>
-							<img src="mainimg/<%=PopularList.get(i).getClass_file()%>">
-						</div>
-						<div>
-							<p class="p_style">
-								<input type="button" value="<%=PopularList.get(i).getClass_area() %>">
-							</p>
-							<p class="p_style"><%=PopularList.get(i).getClass_title() %>
-				</p>
-							<p class="p_style"><%=PopularList.get(i).getClass_salary() %>원</p>
-						</div>
-					</div>
-				<%} 
-				
-				}%>
-				
+				<div>
+					<span><%=article.getClass_title()%> </span>
+					<span>신청 완료 되었습니다. </span>
 				</div>
 			</div>
-				<%
-				if(RecentList != null){
-				%>
-			
-			
-				<p>신규클래스</p>
-				<div class="multiple-items">
-							<%
-		for(int i=0;i<PopularList.size();i++){
-			
-	%>
-					<div class="div_style2" onclick="location.href ='ClassboardDetail.bo?board_num=<%=RecentList.get(i).getClass_num()%>'">
-						<div>
-							<p class="p_style"> <%=RecentList.get(i).getClass_num()%> </p>
-							<img src="mainimg/<%=RecentList.get(i).getClass_file()%>">
-						</div>
-						<div>
-							<p class="p_style">
-								<input type="button" value="<%=RecentList.get(i).getClass_area() %>">
-							</p>
-							<p class="p_style">
-						<%=PopularList.get(i).getClass_title() %>
-				</p>
-							<p class="p_style"><%=RecentList.get(i).getClass_salary() %>원</p>
-						</div>
-					</div>
-				<%} 
-				
-				}%>
-				
+			<div style="width: 1000px">
+				<div class="area">
+					<img alt="클래스 이미지" src="mainimg/<%=article.getClass_file()%>">
 				</div>
+				<div class="area">
+					<div>
+						<span class="locationBtn"><i class='xi-check'></span></i> 
+						<span class="suv_span"><%=article.getClass_salary()%> 원</span>
+					</div>
+					<div>
+						<span class="locationBtn"><i class='xi-maker'></span></i> 
+						<span class="suv_span" id="suv_span1"><%=article.getClass_area()%></span>
+						<p><%=article.getClass_address()%></p>
+					</div>
+					<div>
+						<span class="locationBtn"><i class='xi-calendar'></span></i> <span
+							class="suv_span"><%=article.getClass_time()%></span>
+					</div>
+					<div>
+						<span class="locationBtn"><i class='xi-user'></span></i> <span
+							class="suv_span" id="suv_span2"><%=article.getClass_name()%></span>
+						<p><%=article.getClass_infor()%></p>
+					</div>
+					<div>
+						<input type="button" value="클래스 신청">
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="content">
+					<span> <%=article.getClass_content()%>
+					</span>
+				</div>
+			</div>
+			</div>
 		</form>
 	</section>
 	<footer>

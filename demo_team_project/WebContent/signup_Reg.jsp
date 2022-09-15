@@ -179,7 +179,8 @@
 					전화번호<font class="font1">*</font>
 				</div>
 				<select name="ph1"
-					style="width: 86px; height: 45px; font-size: 14px; border-style: solid; border-width: 2px; border-color: rgb(221, 221, 221); text-align: center;">
+					style="width: 86px; height: 45px; font-size: 14px; border-style: solid; border-width: 2px; border-color: rgb(221, 221, 221); 
+					text-align: center; onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
 					<option value="010">010</option>
 					<option value="011">011</option>
 					<option value="012">012</option>
