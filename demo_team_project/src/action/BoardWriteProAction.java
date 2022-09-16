@@ -50,6 +50,8 @@ public class BoardWriteProAction implements Action {
 		boolean isWriteSuccess = boardWriteProService.registArticle(boardBean);
 		System.out.println(isWriteSuccess);
 		if(!isWriteSuccess){
+			System.out.println("S");
+			
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
@@ -58,12 +60,14 @@ public class BoardWriteProAction implements Action {
 			out.println("</script>");
 		}
 		else{
+			System.out.println("N");
+			
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
-			out.println("alert('ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.')");
+			out.println("alert('Å¬·¡½º ÀÛ¼ºÀÌ ÀúÀåµÇ¾ú½À´Ï´Ù. ³» Å¬·¡½º ÇöÈ²Àº ¸¶ÀÌÆäÀÌÁö¿¡¼­ È®ÀÎ °¡´ÉÇÕ´Ï´Ù')");
 			out.println("</script>");
-			
+		
 			forward = new ActionForward();
 			forward.setRedirect(true);
 			forward.setPath("ClassViewListboardList.bo");

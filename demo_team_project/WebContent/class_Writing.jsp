@@ -460,6 +460,12 @@ select{
 			document.getElementById('preview5').src = "";
 		}
 	}
+	
+	 function comma(str) {
+	        str = String(str);
+	        return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+	    }
+	
 	function add() {
 		new daum.Postcode({
 			oncomplete : function(data) {
@@ -535,7 +541,7 @@ select{
 	</div>
 	<section>
 		<p>교육관리 : 클래스등록</p>
-		<form action="marketWritePro.bo" method="post"
+		<form action="ClassboardWritePro.bo" method="post"
 			enctype="multipart/form-data">
 			<ul>
 				<li>
@@ -674,7 +680,9 @@ select{
 					<div>
 						<input type="text" id="salary" name="market_salary"
 							required="required" placeholder="숫자만 입력해주세요."
-							onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">원<br>
+							onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+							onKeyup="comma(this)"
+						 	maxlength="10">원<br>
 					</div>
 				</li>
 			</ul>

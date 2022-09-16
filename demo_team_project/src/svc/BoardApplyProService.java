@@ -4,15 +4,15 @@ import java.sql.Connection;
 import dao.ClassBoardDAO;
 import vo.ClassBoardBean;
 import static db.JdbcUtil.*;
-public class BoardWriteProService {
+public class BoardApplyProService {
 
-	public boolean registArticle(ClassBoardBean boardBean) throws Exception{
+	public boolean registArticle(ClassBoardBean applyBean) throws Exception{
 		
 		boolean isWriteSuccess = false;
 		Connection con = getConnection();
 		ClassBoardDAO boardDAO = ClassBoardDAO.getInstance();
 		boardDAO.setConnection(con);
-		int insertCount = boardDAO.insertArticle(boardBean);
+		int insertCount = boardDAO.insertApplyArticle(applyBean);
 		
 		if(insertCount > 0){
 			commit(con);

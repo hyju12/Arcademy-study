@@ -117,6 +117,35 @@ public class ClassBoardDAO {
 		return insertCount;
 	}
 	
+	public int insertApplyArticle(ClassBoardBean article){
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql="";
+		String uid = null;
+		
+		int insertCount=0;
+		
+		try {
+			
+			sql="insert into class_apply (uid, class_num)";
+			sql+="values (?,?)";
+			
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, article.getID());
+			pstmt.setInt(2, article.getClass_num());
+			
+			insertCount=pstmt.executeUpdate();
+
+		}catch(Exception ex){
+			System.out.println(ex);
+		}finally{
+			close(rs);
+			close(pstmt);
+		}
+		return insertCount;
+	}
+	
 
 	public ClassBoardBean selectArticle(int board_num){
 

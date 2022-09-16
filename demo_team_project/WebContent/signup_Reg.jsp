@@ -86,6 +86,12 @@
 			});
 		}
 	}
+	
+	function onlynumber(str) {
+	    str = String(str);
+	    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g,'$1');
+	}
+	
 </script>
 <body>
 	<div style="width: 100%; height: 80px;">
@@ -111,7 +117,7 @@
 				<div class="div1">
 					아이디<font class="font1">*</font>
 				</div>
-				<input type="text" id="id1" placeholder="아이디를 입력해주세요" class="input1">
+				<input type="text" id="id1" placeholder="아이디를 입력해주세요" class="input1" maxlength="16">
 				<input type="hidden" id="hidden_id" name="hidden_id" value="">
 				<input type="button" id="idch" class="button1" value="중복확인"
 					onclick="id_check()">
@@ -125,13 +131,14 @@
 					닉네임<font class="font1">*</font>
 				</div>
 				<input type="text" id="nickname1" placeholder="닉네임을 입력해주세요"
-					class="input1"> <input type="button" class="button1"
+					class="input1" onKeyup="this.value=this.value.replace(/[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g,'');"> 
+					<input type="button" class="button1"
 					value="중복확인" onclick="nick_check()"> <input type="hidden"
 					id="hidden_nick" name="hidden_nick" value="">
 			</div>
 			<div>
 				<span id="same01"
-					style="position: absolute; margin-left: 125px; font-size: 12px;"></span>
+					style="position: absolute; margin-left: 125px; font-size: 12px;" maxlength="16"></span>
 			</div>
 			<div class="side1">
 				<div class="div1">
@@ -142,7 +149,7 @@
 			</div>
 			<div>
 				<span id="same1"
-					style="position: absolute; margin-left: 125px; font-size: 12px;"></span>
+					style="position: absolute; margin-left: 125px; font-size: 12px;" maxlength="16"></span>
 			</div>
 			<div class="side1">
 				<div class="div1">
@@ -160,18 +167,18 @@
 					이름<font class="font1">*</font>
 				</div>
 				<input type="text" name="name" id="name1" placeholder="이름을 입력해주세요"
-					class="input1">
+					class="input1" maxlength="10" >
 			</div>
 
 			<div class="side1">
 				<div class="div1" style="margin-top: 10px;">생년월일</div>
 				<div class="div2" style="border-width: 2px;">
 					<input type="text" id="year" placeholder="YYYY" class="text1"
-						maxlength="4" name="year"> <span>/</span> <input
+						maxlength="4" name="year" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"> <span>/</span> <input
 						type="text" id="month" placeholder="MM" class="text1"
-						maxlength="2" name="month"> <span>/</span> <input
+						maxlength="2" name="month" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"> <span>/</span> <input
 						type="text" id="date" placeholder="DD" class="text1" name="day"
-						maxlength="2">
+						maxlength="2" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
 				</div>
 			</div>
 			<div class="side1">
@@ -180,22 +187,24 @@
 				</div>
 				<select name="ph1"
 					style="width: 86px; height: 45px; font-size: 14px; border-style: solid; border-width: 2px; border-color: rgb(221, 221, 221); 
-					text-align: center; onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+					text-align: center;">
 					<option value="010">010</option>
 					<option value="011">011</option>
 					<option value="012">012</option>
 				</select> <input type="text" id="ph2" placeholder="" class="input1"
-					name="ph2" style="width: 85px; text-align: center;" maxlength="4">
+					name="ph2" style="width: 85px; text-align: center;" maxlength="4"
+					onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
 				<input type="text" id="ph3" name="ph3" placeholder="" class="input1"
-					style="width: 85px; text-align: center;" maxlength="4">
+					style="width: 85px; text-align: center;" maxlength="4"
+					onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
 			</div>
 			<div class="side1">
 				<div class="div1">
 					이메일<font class="font1">*</font>
 				</div>
 				<input type="text" id="email" class="input1" style="width: 130px;"
-					name="email"> <input type="text" id="email2"
-					placeholder="직접입력" class="input1" style="width: 129px;"> <select
+					name="email" maxlength="20"> <input type="text" id="email2"
+					placeholder="직접입력" class="input1" style="width: 129px;" > <select
 					style="width: 129px; height: 45px; font-size: 14px; border-style: solid; border-width: 2px; border-color: rgb(221, 221, 221); text-align: center;"
 					onchange="select_mail(this)">
 					<option value="" selected>직접 입력</option>

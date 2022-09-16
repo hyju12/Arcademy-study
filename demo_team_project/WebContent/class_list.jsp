@@ -565,7 +565,7 @@ select[name=category] {
 								<input type="button" value="<%=RecentList.get(i).getClass_area() %>">
 							</p>
 							<p class="p_style">
-						<%=PopularList.get(i).getClass_title() %>
+						<%=RecentList.get(i).getClass_title() %>
 				</p>
 							<p class="p_style"><%=RecentList.get(i).getClass_salary() %>원</p>
 						</div>

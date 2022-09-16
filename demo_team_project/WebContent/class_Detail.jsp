@@ -5,6 +5,7 @@
 	pageEncoding="UTF-8"%>
 <%
 	ClassBoardBean article = (ClassBoardBean) request.getAttribute("article");
+	String boardNum = request.getParameter("board_num");
 %>
 
 <!DOCTYPE html>
@@ -52,10 +53,11 @@
 					slidesToScroll : 1
 				});
 				
-				$('#class_button').click(
-						function() {
-							alert("클래스 신청이 정상적으로 완료되었습니다. <br> 신청 현황은 마이페이지에서 확인 가능합니다.");
-						});
+				$('#class_button').click({
+					alert("클래스 작성이 저장되었습니다. 내 클래스 현황은 마이페이지에서 확인 가능합니다'");	
+					
+				});
+				
 
 			});
 
@@ -567,7 +569,7 @@ form>div:nth-child(1)>div:nth-child(2) {
 		<div>
 			<span>교육관리</span><a href="class_Writing.jsp">클래스등록</a>
 		</div>
-		<form action="">
+		<form action="ClassboardApplyPro.bo">
 			<div>
 				<div>
 					<span><%=article.getClass_title()%> </span> <a class="heartBtn"
@@ -589,12 +591,12 @@ form>div:nth-child(1)>div:nth-child(2) {
 						<p><%=article.getClass_address()%></p>
 					</div>
 					<div>
-						<span class="locationBtn"><i class='xi-calendar'></span></i> <span
-							class="suv_span"><%=article.getClass_time()%></span>
+						<span class="locationBtn"><i class='xi-calendar'></span></i> 
+						<span class="suv_span"><%=article.getClass_time()%></span>
 					</div>
 					<div>
-						<span class="locationBtn"><i class='xi-user'></span></i> <span
-							class="suv_span" id="suv_span2"><%=article.getClass_name()%></span>
+						<span class="locationBtn"><i class='xi-user'></span></i> 
+						<span class="suv_span" id="suv_span2"><%=article.getClass_name()%></span>
 						<p><%=article.getClass_infor()%></p>
 					</div>
 					<div>
@@ -609,6 +611,7 @@ form>div:nth-child(1)>div:nth-child(2) {
 				</div>
 			</div>
 			</div>
+			<input type="hidden" value="<%= boardNum %>" name="board_num">
 		</form>
 	</section>
 	<footer>

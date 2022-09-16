@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import action.Action;
+import action.BoardApplyProAction;
 import action.BoardDetailAction;
 import action.BoardViewListAction;
 import action.BoardWriteProAction;
@@ -38,6 +39,14 @@ public class BoardFrontController extends javax.servlet.http.HttpServlet
 			}
 		}
 		
+		else if(command.equals("/ClassboardApplyPro.bo")){
+			action  = new BoardApplyProAction();
+			try {
+				forward=action.execute(request, response );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		
 
 		else if(command.equals("/ClassViewListboardList.bo")){
